@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUI Architectures - Arquitetura de Software</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/logo.webp" type="image/x-icon">
+</head>
+
+<body>
+
+    <nav class="navbarTopo">
+        <div class="container">
+            <a href="index.html" class="aLogo">
+                <img src="img/senaiLogo.png" alt="Logo SENAI" id="logoSenai" />
+            </a>
+
+            <div class="lang-switcher" aria-label="Seletor de idioma">
+                <button class="lang-btn active" data-lang="pt">PT</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="zh">中文</button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="conteudoPrincipal">
+        <header>
+            <div class="container">
+                <h2 data-i18n="article3Title">3. GUI Architectures</h2>
+                <p data-i18n="article3Subtitle">Estratégia de Arquitetura por Martin Fowler</p>
+            </div>
+        </header>
+
+        <section class="container artigoConteudo">
+            <h3 data-i18n="article3Section1">1. O que é o artigo?</h3>
+            <p data-i18n="article3Text1">Fowler faz um tour pela evolução das arquiteturas de interface de usuário
+                (GUI). Ele mostra como saímos de telas simples de "Formulários" para os famosos padrões MVC
+                (Model-View-Controller) e suas variações. A regra de ouro que ele destaca aqui é a "Apresentação
+                Separada": manter a lógica pesada de negócio (o domínio) totalmente isolada do que o usuário vê na
+                tela, usando eventos para sincronizar as duas coisas.</p>
+
+            <h3 data-i18n="article3Section2">2. Pontos Fortes e Fracos</h3>
+            <p><strong data-i18n="article3Advantages">Vantagens:</strong></p>
+            <ul>
+                <li data-i18n="article3Adv1">Separar o visual da lógica permite usar o mesmo back-end para um site
+                    web, um app mobile e até um terminal de linha de comando.</li>
+                <li data-i18n="article3Adv2">Testes automatizados ficam muito mais fáceis. Você pode testar toda a
+                    lógica da tela sem precisar abrir a interface gráfica.</li>
+            </ul>
+            <p><strong data-i18n="article3Disadvantages">Desvantagens:</strong></p>
+            <ul>
+                <li data-i18n="article3Dis1">Sincronizar tudo por eventos (Observer) pode deixar o fluxo do sistema
+                    meio "escondido", dificultando achar bugs.</li>
+                <li data-i18n="article3Dis2">Exige escrever bem mais código e criar mais classes do que usar
+                    ferramentas rápidas de arrastar e soltar (drag-and-drop).</li>
+            </ul>
+
+            <h3 data-i18n="article3Section3">3. Na Gestão do Projeto</h3>
+            <ul>
+                <li><strong data-i18n="article3Prazo">Prazo:</strong> <span data-i18n="article3PrazoText">Demora
+                    mais para dar o pontapé inicial porque a arquitetura é chata de configurar, mas depois compensa
+                    com a velocidade pra adicionar novas funções.</span></li>
+                <li><strong data-i18n="article3Custo">Custo:</strong> <span data-i18n="article3CustoText">Pede
+                    desenvolvedores com mais conhecimento em padrões de projeto, o que pode encarecer a equipe no
+                    começo.</span></li>
+                <li><strong data-i18n="article3Equipe">Equipe:</strong> <span data-i18n="article3EquipeText">Perfeito
+                    para trabalhar em paralelo. O pessoal de front-end cuida da tela enquanto o back-end foca na
+                    lógica, sem um travar o outro.</span></li>
+                <li><strong data-i18n="article3Riscos">Riscos:</strong> <span data-i18n="article3RiscosText">Diminui
+                    bastante a chance de quebrar o sistema ao mudar a cor de um botão, já que a regra de negócios
+                    fica blindada e coberta por testes.</span></li>
+            </ul>
+
+            <h3 data-i18n="article3Section4">4. Post Original</h3>
+            <p data-i18n="article3Original">Confira o artigo completo publicado por Martin Fowler:</p>
+            <a href="https://martinfowler.com/eaaDev/uiArchs.html" target="_blank" class="btnLink"
+                data-i18n="article3Link">Ler "GUI Architectures" Original</a>
+
+            <div class="navegacaoArtigos">
+                <a href="legacyDisplacement.html" class="btnLink btnVoltar" data-i18n="previous">← Artigo
+                    Anterior</a>
+                <a href="index.html" class="btnLink btnProximo" data-i18n="backHome">Voltar ao Início
+                    →</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footerText" data-i18n="footer">© 2026 Todos os direitos reservados a Pedro Santos e
+                Misael Morgado</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
